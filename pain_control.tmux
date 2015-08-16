@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-default_pane_resize="5"
+default_resize_vertical="3"
+default_resize_horizontal="10"
 
 # tmux show-option "q" (quiet) flag does not set return value to 1, even though
 # the option does not exist. This function patches that.
@@ -21,11 +22,12 @@ window_move_bindings() {
 }
 
 pane_resizing_bindings() {
-	local pane_resize=$(get_tmux_option "@pane_resize" "$default_pane_resize")
-	tmux bind-key -r h resize-pane -L "$pane_resize"
-	tmux bind-key -r j resize-pane -D "$pane_resize"
-	tmux bind-key -r k resize-pane -U "$pane_resize"
-	tmux bind-key -r l resize-pane -R "$pane_resize"
+	local resize_vertical=$(get_tmux_option "@resize_vertical" "$default_resize_vertical")
+	local resize_horizontal=$(get_tmux_option "@resize_horizontal" "$default_resize_horizontal")
+	tmux bind-key -r j resize-pane -D "$resize_vertical"
+	tmux bind-key -r k resize-pane -U "$resize_vertical"
+	tmux bind-key -r h resize-pane -L "$resize_horizontal"
+	tmux bind-key -r l resize-pane -R "$resize_horizontal"
 }
 
 pane_split_bindings() {

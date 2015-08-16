@@ -81,12 +81,13 @@ You should now have all `pain-control` bindings defined.
 
 ### Configuration
 
-You can set `@pane_resize` Tmux option to choose number of resize cells for the
+You can set `@resize_vertical` and `@resize_horizontal` Tmux option to choose number of resize cells for the
 resize bindings. "5" is the default.
 
 Example:
 
-    set-option -g @pane_resize "10"
+    set-option -g @resize_vertical "5"
+    set-option -g @resize_horizontal "15"
 
 ### Other plugins
 
