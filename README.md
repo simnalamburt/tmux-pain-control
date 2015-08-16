@@ -62,7 +62,7 @@ The amount of cells to resize can be configured with `@pane_resize` option. See
 
 **Splitting panes**
 
-- `prefix + |`<br/>
+- `prefix + \ `<br/>
   split current pane horizontally
 - `prefix + -`<br/>
   split current pane vertically
