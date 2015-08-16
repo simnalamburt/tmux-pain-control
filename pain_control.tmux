@@ -22,10 +22,10 @@ window_move_bindings() {
 
 pane_resizing_bindings() {
 	local pane_resize=$(get_tmux_option "@pane_resize" "$default_pane_resize")
-	tmux bind-key -r H resize-pane -L "$pane_resize"
-	tmux bind-key -r J resize-pane -D "$pane_resize"
-	tmux bind-key -r K resize-pane -U "$pane_resize"
-	tmux bind-key -r L resize-pane -R "$pane_resize"
+	tmux bind-key -r h resize-pane -L "$pane_resize"
+	tmux bind-key -r j resize-pane -D "$pane_resize"
+	tmux bind-key -r k resize-pane -U "$pane_resize"
+	tmux bind-key -r l resize-pane -R "$pane_resize"
 }
 
 pane_split_bindings() {

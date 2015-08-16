@@ -18,13 +18,13 @@ Notice most of the bindings emulate vim cursor movements.
 
 **Resizing panes**
 
-- `prefix + shift + h`<br/>
+- `prefix + h`<br/>
   resize current pane 5 cells to the left
-- `prefix + shift + j`<br/>
+- `prefix + j`<br/>
   resize 5 cells in the down direction
-- `prefix + shift + k`<br/>
+- `prefix + k`<br/>
   resize 5 cells in the up direction
-- `prefix + shift + l`<br/>
+- `prefix + l`<br/>
   resize 5 cells to the right
 
 These mappings are `repeatable`.
