@@ -14,30 +14,6 @@ Tested and working on Linux, OSX and Cygwin.
 
 Notice most of the bindings emulate vim cursor movements.
 
-<img align="right" src="/screenshots/pane_navigation.gif" alt="pane navigation"/>
-
-**Navigation**
-
-- `prefix + h` and `prefix + C-h`<br/>
-  select pane on the left
-- `prefix + j` and `prefix + C-j`<br/>
-  select pane below the current one
-- `prefix + k` and `prefix + C-k`<br/>
-  select pane above
-- `prefix + l` and `prefix + C-l`<br/>
-  select pane on the right
-
-These mappings are `repeatable`.
-
-<br/>
-
-**Note**: This overrides tmux's default binding for toggling between last
-active windows, `prefix + l`.
-[tmux-sensible](https://github.com/tmux-plugins/tmux-sensible) gives you
-a better binding for that, `prefix + a` (if your prefix is `C-a`).
-
-<br/><br/>
-
 <img align="right" src="/screenshots/pane_resizing.gif" alt="pane resizing"/>
 
 **Resizing panes**
