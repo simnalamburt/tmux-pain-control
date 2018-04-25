@@ -1,17 +1,19 @@
-# Tmux Pain Control
+tmux-pane
+========
+Tmux plugin for controlling panes. You can install this plugin with [TPM].
+```shell
+# .tmux.conf
+set -g @plugin 'simnalamburt/tmux-pane'
+```
+This plugin was forked from [tmux-pain-control] and customized for my use cases.
 
-Tmux plugin for controlling panes. Adds standard pane navigation bindings.
+[TPM]: https://github.com/tmux-plugins/tpm
+[tmux-pain-control]: https://github.com/tmux-plugins/tmux-pain-control
 
-So far, you had to google around and comb other people's dotfiles to find these.
-This plugin hopefully makes them more available and "more standard".
+&nbsp;
 
-Thanks to the Tmux community for "inventing" these bindings. I've merely just
-copied them here.
-
-Tested and working on Linux, OSX and Cygwin.
-
-### Bindings
-
+Bindings
+--------
 Notice most of the bindings emulate vim cursor movements.
 
 <img align="right" src="/screenshots/pane_resizing.gif" alt="pane resizing"/>
@@ -52,51 +54,19 @@ Newly created pane always has the same path as the original pane.
 - `prefix + <` - moves current window one position to the left
 - `prefix + >` - moves current window one position to the right
 
-### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
+&nbsp;
 
-Add plugin to the list of TPM plugins in `.tmux.conf`:
-
-    set -g @plugin 'tmux-plugins/tmux-pain-control'
-
-Hit `prefix + I` to fetch the plugin and source it.
-
-You should now have all `pain-control` bindings defined.
-
-### Manual Installation
-
-Clone the repo:
-
-    $ git clone https://github.com/tmux-plugins/tmux-pain-control ~/clone/path
-
-Add this line to the bottom of `.tmux.conf`:
-
-    run-shell ~/clone/path/pain_control.tmux
-
-Reload TMUX environment:
-
-    # type this in terminal
-    $ tmux source-file ~/.tmux.conf
-
-You should now have all `pain-control` bindings defined.
-
-### Configuration
-
+Configuration
+--------
 You can set `@resize_vertical` and `@resize_horizontal` Tmux option to choose number of resize cells for the
-resize bindings. "5" is the default.
+resize bindings.
 
-Example:
+```shell
+set-option -g @resize_vertical "5"       # Default: "3"
+set-option -g @resize_horizontal "15"    # Default: "10"
+```
 
-    set-option -g @resize_vertical "5"
-    set-option -g @resize_horizontal "15"
-
-### Other plugins
-
-You might also find these useful:
-
-- [sessionist](https://github.com/tmux-plugins/tmux-sessionist) - lightweight
-  tmux utils for switching and creating sessions
-- [logging](https://github.com/tmux-plugins/tmux-logging) - easy logging and
-  screen capturing
+&nbsp;
 
 ### License
 [MIT](LICENSE.md)
